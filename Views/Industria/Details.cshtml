@@ -1,0 +1,35 @@
+﻿@model LessPollu.MVC.Models.IndustriaEntity
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-success fst-italic fw-bold">Details</h1>
+
+<div>
+    <h4 class="text-success fst-italic fw-bold">IndustriaEntity</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+    </dl>
+</div>
+<div><a class="btn btn-outline-warning fw-bold" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a></div>
+<div><a class="btn btn-outline-secondary fw-bold mt-3" asp-action="Index">Back to List</a></div>
